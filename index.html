@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Змейка</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Змейка</h1>
+        <div class="panel">
+            <span>Счёт: <span id="scoreDisplay">0</span></span>
+            <span>Рекорд: <span id="highScoreDisplay">0</span></span>
+        </div>
+        <canvas id="gameCanvas" width="500" height="500"></canvas>
+        <div class="controls">
+            <button id="newGameBtn">Новая игра</button>
+            <button id="pauseBtn">Пауза</button>
+            <button id="resetHighScoreBtn">Сброс</button>
+        </div>
+        <div class="options">
+            <label>Сложность:
+                <select id="difficultySelect">
+                    <option value="easy">Лёгкий</option>
+                    <option value="medium" selected>Средний</option>
+                    <option value="hard">Сложный</option>
+                </select>
+            </label>
+            <label>
+                <input type="checkbox" id="obstaclesCheckbox"> Препятствия
+            </label>
+        </div>
+        <div class="key-settings">
+    <h3>Настройка клавиш (нажмите на кнопку и затем нужную клавишу)</h3>
+    <label>Вверх: <span id="keyUpDisplay" class="key-btn" tabindex="0">ArrowUp</span></label>
+    <label>Вниз: <span id="keyDownDisplay" class="key-btn" tabindex="0">ArrowDown</span></label>
+    <label>Влево: <span id="keyLeftDisplay" class="key-btn" tabindex="0">ArrowLeft</span></label>
+    <label>Вправо: <span id="keyRightDisplay" class="key-btn" tabindex="0">ArrowRight</span></label>
+</div>
+    </div>
+    <div id="gameOverMessage" class="game-over hidden">Игра окончена!</div>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
